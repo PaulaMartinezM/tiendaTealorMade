@@ -1,5 +1,6 @@
 import './NavBar.css';
 import brand from '../img/logoTealorMade.jpg'
+import CartWidget from './CartWidget';
 
 
 function NavBar() {
@@ -8,9 +9,11 @@ function NavBar() {
         <header className='header'>
             <div className='logo-container'>
                 <img src={brand} alt="logo" />
-
-                <h1>TEALOR MADE BLENDS</h1>
             </div>
+                <div className='brandCart'>
+                    <h1>TEALOR MADE BLENDS</h1>
+                    <CartWidget/>
+                </div>
 
         <nav>
             <ul className="nav-container">

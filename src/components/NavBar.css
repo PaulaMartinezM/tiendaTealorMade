@@ -6,28 +6,37 @@ header {
     width: 100%;
   }
 header img {
-    width: 25%;
-    padding-left: 40vw;
+    display: flex;
+    width: 15%;
+    padding-left: 45vw;
     padding-top: 0;
     padding-bottom: 0;
+    justify-content: center ;
 }
 header nav li {
     text-decoration: none;
 }
 header nav li a {
     display: flex;
-    flex-direction: column;
     font-family: 'Asap', sans-serif;
     font-size: 1.5rem;
     text-decoration: none;
     color: white;
     padding-right: 1rem;
+    
   }
 .nav-container {
     background-color: #C49A64;
     text-decoration: none;
     list-style: none;
     display: flex;
-    flex-direction: row;
     text-align: justify;
+    justify-content: space-around;
+    margin-bottom: 0;
+  }
+  .brandCart {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
