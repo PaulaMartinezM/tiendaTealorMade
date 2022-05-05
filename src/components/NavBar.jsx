@@ -10,27 +10,21 @@ function NavBar() {
             <div className='logo-container'>
                 <img src={brand} alt="logo" />
             </div>
-                <div className='brandCart'>
-                    <h1>TEALOR MADE BLENDS</h1>
-                    <CartWidget/>
-                </div>
+                
 
         <nav>
             <ul className="nav-container">
                 <li>
-                    <a href="/">INICIO</a>
+                    <a id='name' href="/">TEALOR MADE BLENDS</a>
                 </li>
                 <li>
-                    <a href="/">QUIENES SOMOS</a>
+                    <a href="/">TÉ</a>
                 </li>
                 <li>
-                    <a href="/">MUNDO TEALOR</a>
+                    <a href="/">YERBA MATE</a>
                 </li>
                 <li>
-                    <a href="/">PRODUCTOS</a>
-                </li>
-                <li>
-                    <a href="/">CONTACTO</a>
+                    <CartWidget/>
                 </li>
             </ul>
         </nav>

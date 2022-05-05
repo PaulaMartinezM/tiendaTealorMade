@@ -1,0 +1,8 @@
+header img {
+    display: flex;
+    width: 15%;
+    padding-left: 45vw;
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: center ;
+}
