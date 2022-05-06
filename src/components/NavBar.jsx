@@ -18,10 +18,10 @@ function NavBar() {
                     <a id='name' href="/">TEALOR MADE BLENDS</a>
                 </li>
                 <li>
-                    <a href="/">TÉ</a>
+                    <a id='te' href="/">Té</a>
                 </li>
                 <li>
-                    <a href="/">YERBA MATE</a>
+                    <a id='yerba' href="/">Yerba Mate</a>
                 </li>
                 <li>
                     <CartWidget/>

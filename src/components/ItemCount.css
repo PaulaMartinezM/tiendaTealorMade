@@ -1,0 +1,18 @@
+.itemCount {
+    display: flex;
+    display: inline;
+    color: #AABEAB;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    
+}
+.itemAdd {
+    margin-left: 45%;
+}
+
+button{
+  background-color: #C49A64;
+  color: white;
+  outline-color: #C49A64;
+  outline-width: 0rem;
+}

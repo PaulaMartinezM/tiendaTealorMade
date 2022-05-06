@@ -6,7 +6,8 @@ header {
     width: 100%;
   }
 header img {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     width: 15%;
     padding-left: 45vw;
     padding-top: 0;
@@ -42,6 +43,14 @@ header nav li a {
     margin-bottom: 0%;
     padding-left: 2rem;
   }
+  #te {
+    padding-right: 0%;
+    padding-left: 10rem;
+  }
+  #yerba {
+    padding-right: 10rem;
+    padding-left: 0%;
+  }
   nav li img {
     display: flex;
     align-items: center;
@@ -57,4 +66,5 @@ header nav li a {
   #name{
     font-weight:bold;
     font-size: 30px;
+    padding-right: 2rem;
   }
