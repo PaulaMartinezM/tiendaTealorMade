@@ -1,0 +1,21 @@
+.pictureCard {
+    width: 100%;
+}
+
+.cardText {
+    color: #AABEAB;
+    display: grid;
+    justify-items: center;
+}
+
+.cardInfo {
+    display: grid;
+    justify-items: center;
+}
+.cardName {
+    font-weight: bold;
+    font-size: larger;
+}
+.cardSpace{
+    padding-bottom: 2rem;
+}

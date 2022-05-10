@@ -1,19 +1,19 @@
 import React from 'react'
-import Card from 'react-bootstrap/Card';
+import { Card } from 'react-bootstrap';
 import ItemCount from "./ItemCount";
 import './Item.css';
 
 
 function Item({ name, category, variety, price, img }) {
     return (
-        <div>
+        <div className='cardSpace'>
             <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={img} />
-                <Card.Body>
-                    <Card.Title>{name}</Card.Title>
-                    <Card.Text>
-                        <p>{category}</p>
-                        <p>{variety}</p>
+                <Card.Img className='pictureCard' variant="top" src={img} />
+                <Card.Body className='cardText'>
+                    <Card.Title className='cardName'>{name}</Card.Title>
+                    <Card.Text className='cardInfo'>
+                        <p>{`Categoría: ${category}`}</p>
+                        <p>{`Variedad: ${variety}`}</p>
                         <p>{`Precio: ${price}`}</p>
                     </Card.Text>
                     <ItemCount initial={1} stock={5} onAdd={()=>alert(`Usted agregó unidades a su carrito`)}/>
