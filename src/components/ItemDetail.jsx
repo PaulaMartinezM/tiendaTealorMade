@@ -2,14 +2,14 @@
 import './ItemDetail.css'
 
 
-function ItemDetail({ item, onAdd }) {
+function ItemDetail({ item }) {
 
     return (
         <div>
             <div className='itemDetailComplete'>
-                <img className='itemDetailImg' src={item.img} alt=""/>
                 <div className='itemInformation'>
                     <h3 className='itemName'>{item.name}</h3>
+                    <img className='itemDetailImg' src={item.img} alt=""/>
                     <div className='itemDetailDetail'>
                         <p>{`Categoría: ${item.category}`}</p>
                         <p>{`Variedad: ${item.variety}`}</p>
@@ -19,7 +19,7 @@ function ItemDetail({ item, onAdd }) {
                 </div>
             </div>
         </div>
-    )
+    );
 }
 
 export default ItemDetail

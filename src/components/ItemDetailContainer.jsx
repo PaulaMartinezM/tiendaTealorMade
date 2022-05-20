@@ -31,7 +31,7 @@ function ItemDetailContainer() {
 
 
   return (
-    <div>
+    <div className="loading">
         {loader ? <h3>Cargando...</h3> : <ItemDetail item={item} onAdd={onAdd}/>}
     </div>
   );
