@@ -1,22 +1,26 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
 import ItemCount from "./ItemCount";
 import './Item.css';
 
 
-function Item({ name, category, variety, price, img }) {
+function Item({ el }) {
     return (
         <div className='cardSpace'>
             <Card style={{ width: '18rem' }}>
-                <Card.Img className='pictureCard' variant="top" src={img} />
+                <Card.Img className='pictureCard' variant="top" src={el.img} />
                 <Card.Body className='cardText'>
-                    <Card.Title className='cardName'>{name}</Card.Title>
+                    <Card.Title className='cardName'>{el.name}</Card.Title>
                     <Card.Text className='cardInfo'>
-                        <p>{`Categoría: ${category}`}</p>
-                        <p>{`Variedad: ${variety}`}</p>
-                        <p>{`Precio: ${price}`}</p>
+                        <p>{`Categoría: ${el.category}`}</p>
+                        <p>{`Variedad: ${el.variety}`}</p>
+                        <p>{`Precio: ${el.price}`}</p>
                     </Card.Text>
-                    <ItemCount initial={1} stock={5} onAdd={()=>alert(`Usted agregó unidades a su carrito`)}/>
+                    <Link to={`/itemDetail/${el.id}`}>
+                        <button className="item__addBtn" >Agregar al pedido</button>
+                    </Link>
+                    <ItemCount initial={1} stock={5} onAdd={() => alert(`Usted agregó unidades a su carrito`)} />
                 </Card.Body>
             </Card>
         </div>

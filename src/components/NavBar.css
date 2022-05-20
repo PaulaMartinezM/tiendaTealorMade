@@ -4,6 +4,7 @@ header {
     color: white;
     justify-content: center;
     width: 100%;
+    text-decoration: none;
   }
 header img {
     display: grid;
@@ -46,10 +47,12 @@ header nav li a {
   #te {
     padding-right: 0%;
     padding-left: 10rem;
+    text-decoration: none;
   }
   #yerba {
     padding-right: 10rem;
     padding-left: 0%;
+    text-decoration: none;
   }
   nav li img {
     display: flex;
@@ -67,4 +70,5 @@ header nav li a {
     font-weight:bold;
     font-size: 30px;
     padding-right: 2rem;
+    text-decoration: none;
   }

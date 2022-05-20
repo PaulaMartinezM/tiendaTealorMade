@@ -1,7 +1,9 @@
+
 import './ItemDetail.css'
 
 
-function ItemDetail({ item }) {
+function ItemDetail({ item, onAdd }) {
+
     return (
         <div>
             <div className='itemDetailComplete'>
@@ -13,7 +15,7 @@ function ItemDetail({ item }) {
                         <p>{`Variedad: ${item.variety}`}</p>
                         <p>{`Precio: ${item.price}`}</p>
                     </div>
-                    <button>Agregar al pedido</button>
+                    <button>Agregar al carrito</button>
                 </div>
             </div>
         </div>

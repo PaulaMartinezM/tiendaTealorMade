@@ -1,5 +1,6 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import './ItemListContainer.css';
 import ItemList from './ItemList';
 
@@ -18,33 +19,32 @@ const products = [
   { id: 10, name: "Frutos Rojos", variety: "Frutos", price: 200, category: "Yerba Mate", img: "./yerbaFrutosRojos.png" },
 ];
 
-const getFetch = new Promise ((resolve, reject) => {
-  setTimeout(() => {
-    resolve (products);
-  }, 2000)
-})
 
-function ItemListContainer({ greeting = 'Hola'}) {
-  const [prods, setProducts] = useState([]);
+function ItemListContainer() {
+
+  const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
+  const {id} = useParams();
 
   useEffect(() => {
-    getFetch
-    .then (answer => setProducts(answer))
-    .catch ((err) => console.log(err))
-    .finally (() => setLoading(false))
+    setTimeout(() => {
+      fetch("/data/data.json")
+      .then(response => response.json())
+            .then(data => setItems(data))
+            .catch(err => console.log(err))
+            .finally(() => setLoading(false))
+    }, 5000);
   },[]);
 
   return (
     <div>
-        <h1 className="title">{ greeting }</h1>
         {loading ?
         <h2 className='loading'>Cargando...</h2>
         :
-        <ItemList prods={prods}/>
+        <ItemList items={items} id={id} />
         }
     </div>
-  )
+  );
 }
 
 export default ItemListContainer

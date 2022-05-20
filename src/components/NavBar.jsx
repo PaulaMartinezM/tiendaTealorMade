@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 import brand from '../img/logoTealorMade.jpg'
 import CartWidget from './CartWidget';
@@ -7,22 +8,20 @@ function NavBar() {
 
     return (
         <header className='header'>
-            <div className='logo-container'>
+            <Link to='/' className='logo-container'>
                 <img src={brand} alt="logo" />
-            </div>
-                
-
+            </Link>
         <nav>
             <ul className="nav-container">
-                <li>
-                    <a id='name' href="/">TEALOR MADE BLENDS</a>
-                </li>
-                <li>
-                    <a id='te' href="/">Té</a>
-                </li>
-                <li>
-                    <a id='yerba' href="/">Yerba Mate</a>
-                </li>
+                <Link to='/'>
+                <li id='name'>TEALOR MADE BLENDS</li>
+                </Link>
+                <Link to='/category/Te'>
+                <li id='te'>Té</li>
+                </Link>
+                <Link to='/category/Yerba Mate'>
+                <li id='yerba'>Yerba Mate</li>
+                </Link>
                 <li>
                     <CartWidget/>
                 </li>
@@ -30,7 +29,7 @@ function NavBar() {
         </nav>
 
         </header>
-    )
+    );
 }
 
 export default NavBar
