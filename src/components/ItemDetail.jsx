@@ -2,20 +2,25 @@
 import './ItemDetail.css'
 
 
-function ItemDetail({ item }) {
+const ItemDetail = ({ product }) => {
 
     return (
-        <div>
-            <div className='itemDetailComplete'>
-                <div className='itemInformation'>
-                    <h3 className='itemName'>{item.name}</h3>
-                    <img className='itemDetailImg' src={item.img} alt=""/>
-                    <div className='itemDetailDetail'>
-                        <p>{`Categoría: ${item.category}`}</p>
-                        <p>{`Variedad: ${item.variety}`}</p>
-                        <p>{`Precio: ${item.price}`}</p>
+        <div className='itemDetail'>
+                <img className='itemDetailImg' src={product.img} alt="te" />
+            <div className="col">
+                <div className='itemDetailComplete'>
+                    <div className='itemInformation'>
+                        <h3 className='itemName'>{product.name}</h3>
+                        <div>
+                            <span>{`Categoría: ${product.category}`}</span>
+                            <br />
+                            <span>{`Variedad: ${product.variety}`}</span>
+                            <br />
+                            <span>{`Precio: ${product.price}`}</span>
+                        </div>
+                        <br/>
+                        <button>Agregar al carrito</button>
                     </div>
-                    <button>Agregar al carrito</button>
                 </div>
             </div>
         </div>

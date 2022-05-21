@@ -18,7 +18,7 @@ function Item({ el }) {
                         <p>{`Precio: ${el.price}`}</p>
                     </Card.Text>
                     <Link to={`/itemDetail/${el.id}`}>
-                        <button className="item__addBtn" >Agregar al pedido</button>
+                        <button className="item__addBtn" >Detalle del producto</button>
                     </Link>
                     <ItemCount initial={1} stock={5} onAdd={() => alert(`Usted agregó unidades a su carrito`)} />
                 </Card.Body>

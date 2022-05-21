@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { getFetch } from "../getFetch";
 import ItemDetail from "./ItemDetail";
 import './ItemDetailContainer.css';
 
-function ItemDetailContainer() {
-    const [item, setItems] = useState({});
+const ItemDetailContainer = () => {
+    const [product, setProduct] = useState({});
     const [loader, setLoader] = useState(true);
     const [quantityToAdd, setQuantityToAdd] = useState();
 
@@ -19,20 +19,18 @@ function ItemDetailContainer() {
 
     useEffect(() => {
         setTimeout(() => {
-            fetch("/data/data.json")
-            .then(response => response.json())
-            .then(itemsList => itemsList.find(el => el.id === id))
-            .then(data => setItems(data))
+            getFetch(id)
+            .then(response => setProduct(response))
             .catch(err => console.log(err))
             .finally(() => setLoader(false))
 
-        }, 3000);
+        }, 5000);
     },[id]);
 
 
   return (
     <div className="loading">
-        {loader ? <h3>Cargando...</h3> : <ItemDetail item={item} onAdd={onAdd}/>}
+        {loader ? <h3>Cargando...</h3> : <ItemDetail product={product} onAdd={onAdd}/>}
     </div>
   );
 }
