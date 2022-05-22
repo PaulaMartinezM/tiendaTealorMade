@@ -48,11 +48,13 @@ header nav li a {
     padding-right: 0%;
     padding-left: 10rem;
     text-decoration: none;
+    color: white;
   }
   #yerba {
     padding-right: 10rem;
     padding-left: 0%;
     text-decoration: none;
+    color: white;
   }
   nav li img {
     display: flex;
@@ -71,4 +73,5 @@ header nav li a {
     font-size: 30px;
     padding-right: 2rem;
     text-decoration: none;
+    color: white;
   }

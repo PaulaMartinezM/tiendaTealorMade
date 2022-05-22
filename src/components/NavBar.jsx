@@ -13,13 +13,13 @@ function NavBar() {
             </Link>
         <nav>
             <ul className="nav-container">
-                <Link to='/'>
+                <Link to='/' style={{ textDecoration: 'none' }}>
                 <li id='name'>TEALOR MADE BLENDS</li>
                 </Link>
-                <Link to='/category/Te'>
+                <Link to='/category/Te' style={{ textDecoration: 'none' }}>
                 <li id='te'>Té</li>
                 </Link>
-                <Link to='/category/Yerba Mate'>
+                <Link to='/category/Yerba Mate' style={{ textDecoration: 'none' }}>
                 <li id='yerba'>Yerba Mate</li>
                 </Link>
                 <li>
