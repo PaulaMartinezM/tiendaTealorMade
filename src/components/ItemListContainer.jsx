@@ -30,9 +30,9 @@ function ItemListContainer() {
     setTimeout(() => {
       fetch("/data/data.json")
       .then(response => response.json())
-            .then(data => setItems(data))
-            .catch(err => console.log(err))
-            .finally(() => setLoading(false))
+      .then(data => setItems(data))
+      .catch(err => console.log(err))
+      .finally(() => setLoading(false))
     }, 5000);
   },[]);
 

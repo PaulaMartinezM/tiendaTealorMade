@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
-import ItemCount from "./ItemCount";
 import './Item.css';
 
 
@@ -20,7 +19,6 @@ function Item({ el }) {
                     <Link to={`/itemDetail/${el.id}`}>
                         <button className="item__addBtn" >Detalle del producto</button>
                     </Link>
-                    <ItemCount initial={1} stock={5} onAdd={() => alert(`Usted agregó unidades a su carrito`)} />
                 </Card.Body>
             </Card>
         </div>

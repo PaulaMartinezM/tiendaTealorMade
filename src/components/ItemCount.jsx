@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import './ItemCount.css'
 
 
-function ItemCount({stock, initial, onAdd}) {
+function ItemCount({stock, initial, onAdd, product, handleInputType}) {
     
     let [quantity, setInitial] = useState(initial);
     
@@ -17,17 +17,19 @@ function ItemCount({stock, initial, onAdd}) {
             setInitial(quantity - 1);
         }
     }
-   
+    function addToCart(){
+        onAdd(quantity, product.name);
+        handleInputType();
+    }
 
   return (
       <>
-      <div className='title'>Producto seleccionado</div>
       <div className='itemAdd'>
       <button onClick={clickLess}>-</button>
       <span className='itemCount'>{quantity}</span>
       <button onClick={clickPlus}>+</button> 
       <br/>
-      <button onClick={onAdd} >Agregar al carrito</button>
+      <button onClick={addToCart} >Agregar al carrito</button>
       </div>
       
       </>
