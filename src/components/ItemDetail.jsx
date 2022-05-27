@@ -1,6 +1,6 @@
 
 import { useState } from 'react';
-import {UseCartContext} from "../context/CartContext";
+import { UseCartContext } from "../context/CartContext";
 import ItemCount from "./ItemCount"
 import BuyButtons from "./BuyButtons"
 import './ItemDetail.css'
@@ -11,7 +11,7 @@ const ItemDetail = ({ product }) => {
     const [inputType, setInputType] = useState('itemCount');
     const {addToCart} = UseCartContext();
 
-    function onAdd(quantity){
+    function onAdd(quantity) {
         addToCart({...product, quantity})
     }
     function handleInputType(){

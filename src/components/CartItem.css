@@ -1,0 +1,9 @@
+li{
+    list-style: none;
+    font-size: larger;
+    line-height: 2rem;
+}
+.cart__remove-icon {
+    cursor: pointer;
+    font-weight: bolder;
+}

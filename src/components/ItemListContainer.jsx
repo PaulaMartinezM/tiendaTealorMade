@@ -33,7 +33,7 @@ function ItemListContainer() {
       .then(data => setItems(data))
       .catch(err => console.log(err))
       .finally(() => setLoading(false))
-    }, 5000);
+    }, 3000);
   },[]);
 
   return (
@@ -41,7 +41,7 @@ function ItemListContainer() {
         {loading ?
         <h2 className='loading'>Cargando...</h2>
         :
-        <ItemList items={items} id={id} />
+        <ItemList products={products} id={id} />
         }
     </div>
   );

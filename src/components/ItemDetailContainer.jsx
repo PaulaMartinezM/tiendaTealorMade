@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getFetch } from "../getFetch";
 import ItemDetail from "./ItemDetail";
 import './ItemDetailContainer.css';
+import ItemList from "./ItemList";
 
 const ItemDetailContainer = () => {
     const [product, setProduct] = useState({});
@@ -18,7 +19,6 @@ const ItemDetailContainer = () => {
             .catch(err => console.log(err))
             .finally(() => setLoader(false))
 
-    
     },[id]);
 
 

@@ -17,7 +17,7 @@ function ItemCount({stock, initial, onAdd, product, handleInputType}) {
             setInitial(quantity - 1);
         }
     }
-    function addToCart(){
+    function addItem(){
         onAdd(quantity, product.name);
         handleInputType();
     }
@@ -29,7 +29,7 @@ function ItemCount({stock, initial, onAdd, product, handleInputType}) {
       <span className='itemCount'>{quantity}</span>
       <button onClick={clickPlus}>+</button> 
       <br/>
-      <button onClick={addToCart} >Agregar al carrito</button>
+      <button onClick={addItem} >Agregar al carrito</button>
       </div>
       
       </>
