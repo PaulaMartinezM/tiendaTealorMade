@@ -10,7 +10,7 @@ function CartWidget() {
   return (
     <Link to='/cart'>
       <img className='cart' src={Cart} alt='shoppingCart'/>
-      <span className="cartCounter">{totalProducts}</span>
+      <span className="cartCounter">{totalProducts !== 0 && totalProducts}</span>
     </Link>
   );
 }
