@@ -3,7 +3,7 @@ li{
     font-size: larger;
     line-height: 2rem;
 }
-.cart__remove-icon {
+.cartRemove {
     cursor: pointer;
     font-weight: bolder;
 }
