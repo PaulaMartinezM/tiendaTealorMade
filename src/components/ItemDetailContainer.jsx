@@ -3,23 +3,34 @@ import { useParams } from "react-router-dom";
 import { getFetch } from "../getFetch";
 import ItemDetail from "./ItemDetail";
 import './ItemDetailContainer.css';
-import ItemList from "./ItemList";
+import {doc, getDoc, getFirestore} from 'firebase/firestore'
 
-const ItemDetailContainer = () => {
+import React from 'react'
+
+export default function ItemDetailContainer() {
+    const [item, setItem] = useState({});
     const [product, setProduct] = useState({});
     const [loader, setLoader] = useState(true);
-    
-    const {id} = useParams();
-   
+        
+    const {id} = useParams(); 
 
     useEffect(() => {
-        
-            getFetch(id)
-            .then(response => setProduct(response))
-            .catch(err => console.log(err))
-            .finally(() => setLoader(false))
+        const db = getFirestore();
+        const dbQuery = doc(db, 'items', id);
+        getDoc(dbQuery)
+        .then(resp => setItem({id: resp.id, ...resp.data()}))
+        .catch(err => console.log(err))
+        .finally(() => setLoader(false))
+    },[id])
 
-    },[id]);
+//    useEffect(() => {
+        
+//            getFetch(id)
+//            .then(response => setProduct(response))
+//            .catch(err => console.log(err))
+//            .finally(() => setLoader(false))
+
+//    },[id]);
 
 
   return (
@@ -30,5 +41,3 @@ const ItemDetailContainer = () => {
     </div>
   );
 }
-
-export default ItemDetailContainer

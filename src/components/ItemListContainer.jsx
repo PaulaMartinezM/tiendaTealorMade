@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemListContainer.css';
 import ItemList from './ItemList';
+import { collection, getDocs, getFirestore } from 'firebase/firestore';
 
 
 
@@ -21,20 +22,30 @@ const products = [
 
 
 function ItemListContainer() {
-
+ 
   const [items, setItems] = useState([]);
   const [loading, setLoading] = useState(true);
   const {id} = useParams();
 
-  useEffect(() => {
-    setTimeout(() => {
-      fetch("/data/data.json")
-      .then(response => response.json())
-      .then(data => setItems(data))
-      .catch(err => console.log(err))
-      .finally(() => setLoading(false))
-    }, 3000);
-  },[]);
+useEffect(()=> {
+  const db = getFirestore()
+
+  const queryCollection = collection(db, 'items')
+  getDocs(queryCollection)
+  .then(resp => setItems(resp.docs.map(item => ({id: item.id, ...item.data()}) )))
+  .catch(err => console.log(err))
+  .finally(() => setLoading(false))
+}, []);
+
+  //useEffect(() => {
+  //  setTimeout(() => {
+  //    fetch("/data/data.json")
+  //    .then(response => response.json())
+  //    .then(data => setItems(data))
+  //    .catch(err => console.log(err))
+  //    .finally(() => setLoading(false))
+  //  }, 3000);
+  //},[]);
 
   return (
     <div>
