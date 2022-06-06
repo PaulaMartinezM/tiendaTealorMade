@@ -5,7 +5,8 @@
         "variety": "Rojo", 
         "price": "550", 
         "category": "Te", 
-        "img": "/tePuerh.png"
+        "img": "/tePuerh.png",
+        "detail": "Té Rojo de China."
     },
     { 
         "id": "2", 
@@ -13,7 +14,8 @@
         "variety": "Negro", 
         "price": "600", 
         "category": "Te", 
-        "img": "/teEarlGrey.png"
+        "img": "/teEarlGrey.png",
+        "detail": "Te negro de Assam con bergamota."
     },
     { 
         "id": "3", 
@@ -21,7 +23,8 @@
         "variety": "Negro", 
         "price": "400", 
         "category": "Te", 
-        "img": "/teAntonieta.png"
+        "img": "/teAntonieta.png",
+        "detail": "Te negro con pétalos de rosa y chocolate."
     },
     { 
         "id": "4", 
@@ -29,7 +32,8 @@
         "variety": "Negro", 
         "price": "400", 
         "category": "Te", 
-        "img": "/teFrutosDelBosque.png"
+        "img": "/teFrutosDelBosque.png",
+        "detail":"Té negro con arándanos, rosa mosqueta e hibiscus."
     },
     { 
         "id": "5", 
@@ -37,7 +41,8 @@
         "variety": "Negro", 
         "price": "400", 
         "category": "Te", 
-        "img": "/teChai.png"
+        "img": "/teChai.png",
+        "detail":"Té negro con canela, clavo, coriandro, naranja y anís."
     },
     { 
         "id": "6", 
@@ -45,7 +50,8 @@
         "variety": "Verde", 
         "price": "400", 
         "category": "Te", 
-        "img": "/teVerdeMiel.png"
+        "img": "/teVerdeMiel.png",
+        "detail":"Té verde con miel y jengibre."
     },
     { 
         "id": "7", 
@@ -53,7 +59,8 @@
         "variety": "Verde", 
         "price": "400", 
         "category": "Te", 
-        "img": "/teVerdeFrutal.png"
+        "img": "/teVerdeFrutal.png",
+        "detail": "Té verde con banana y durazno."
     },
     { 
         "id": "8", 
@@ -61,7 +68,8 @@
         "variety": "Verde", 
         "price": "400", 
         "category": "Te", 
-        "img": "/teVerdeCitrico.png"
+        "img": "/teVerdeCitrico.png",
+        "detail": "Té verde con naranja, mandarina y limón."
     },
     { 
         "id": "9", 
@@ -69,7 +77,8 @@
         "variety": "Hierbas", 
         "price": "200", 
         "category": "Yerba Mate", 
-        "img": "/yerbaMixSerrano.png"
+        "img": "/yerbaMixSerrano.png",
+        "detail": "Mix de menta, poleo, eucalipto y boldo."
     },
     { 
         "id": "10", 
@@ -77,6 +86,7 @@
         "variety": "Frutos", 
         "price": "200", 
         "category": "Yerba Mate", 
-        "img": "/yerbaFrutosRojos.png"
+        "img": "/yerbaFrutosRojos.png",
+        "detail": "Mix de hibiscus, frutillas y frambuesas."
     }
 ]

@@ -1,16 +1,11 @@
-import React from 'react'
-
 import Item from "./Item";
 import './ItemList.css';
 
 
-function ItemList({products, id}) {
+function ItemList({items}) {
   return (
     <div className='cardPosition'>
-        {id ?
-        products.filter(el => el.category === id).map((el)=><Item key={el.id} el={el}/>):
-        products.map((el) => <Item key={el.id} el={el}/>)
-        }
+        {items.map((el) => <Item key={el.id} el={el}/>)}
     </div>
   )
 }

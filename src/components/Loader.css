@@ -1,0 +1,7 @@
+div{
+    font-size: larger;
+    color: #AABEAB;
+    display: grid;
+    justify-content: center;
+    padding-top: 2rem;
+}

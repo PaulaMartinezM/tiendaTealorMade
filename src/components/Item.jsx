@@ -17,7 +17,7 @@ function Item({ el }) {
                         <p>{`Precio: ${el.price}`}</p>
                     </Card.Text>
                     <Link to={`/itemDetail/${el.id}`}>
-                        <button className="item__addBtn" >Detalle del producto</button>
+                        <button>Detalle del producto</button>
                     </Link>
                 </Card.Body>
             </Card>

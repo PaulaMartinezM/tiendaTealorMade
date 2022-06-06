@@ -3,56 +3,48 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './ItemListContainer.css';
 import ItemList from './ItemList';
-import { collection, getDocs, getFirestore } from 'firebase/firestore';
-
-
-
-const products = [ 
-  { id: 1, name: "Puerh", variety: "Rojo", price: 550, category: "Te", img: "/tePuerh.png" },
-  { id: 2, name: "Earl Grey", variety: "Negro", price: 600, category: "Te", img: "/teEarlGrey.png" },
-  { id: 3, name: "Antonieta", variety: "Negro", price: 400, category: "Te", img: "/teAntonieta.png" },
-  { id: 4, name: "Frutos del Bosque", variety: "Negro", price: 400, category: "Te", img: "/teFrutosDelBosque.png" },
-  { id: 5, name: "Chai", variety: "Negro", price: 400, category: "Te", img: "/teChai.png" },
-  { id: 6, name: "Verde Miel", variety: "Verde", price: 400, category: "Te", img: "/teVerdeMiel.png" },
-  { id: 7, name: "Verde Frutal", variety: "Verde", price: 400, category: "Te", img: "/teVerdeFrutal.png" },
-  { id: 8, name: "Verde Citrico", variety: "Verde", price: 400, category: "Te", img: "/teVerdeCitrico.png" },
-  { id: 9, name: "Mix Serrano", variety: "Hierbas", price: 200, category: "Yerba Mate", img: "/yerbaMixSerrano.png" },
-  { id: 10, name: "Frutos Rojos", variety: "Frutos", price: 200, category: "Yerba Mate", img: "/yerbaFrutosRojos.png" },
-];
-
+import Loader from './Loader';
+import { collection, getDocs, getFirestore, query, where } from 'firebase/firestore';
 
 function ItemListContainer() {
  
   const [items, setItems] = useState([]);
-  const [loading, setLoading] = useState(true);
+  const [loader, setLoader] = useState(true);
   const {id} = useParams();
 
 useEffect(()=> {
-  const db = getFirestore()
-
-  const queryCollection = collection(db, 'items')
-  getDocs(queryCollection)
-  .then(resp => setItems(resp.docs.map(item => ({id: item.id, ...item.data()}) )))
-  .catch(err => console.log(err))
-  .finally(() => setLoading(false))
-}, []);
-
-  //useEffect(() => {
-  //  setTimeout(() => {
-  //    fetch("/data/data.json")
-  //    .then(response => response.json())
-  //    .then(data => setItems(data))
-  //    .catch(err => console.log(err))
-  //    .finally(() => setLoading(false))
-  //  }, 3000);
-  //},[]);
+  const db = getFirestore();
+  const queryCollection = collection(db, 'items');
+  if (!id) {
+    getDocs(queryCollection)
+    .then(resp => resp.docs.map(el => ({id: el.id, ...el.data()})))
+    .then(data => data.sort((a,b) => {
+      if (a.category > b.category) {
+        return 1;
+      }
+      if (a.category < b.category) {
+        return -1;
+      }
+      return 0;
+    }))
+    .then(sorted => setItems(sorted))
+    .catch(err => console.log(err))
+    .finally(() =>setLoader(false))
+  } else {
+    const queryCollectionFilter = query(queryCollection, where('category', '==', id));
+    getDocs(queryCollectionFilter)
+    .then(resp => setItems(resp.docs.map(el => ({id: el.id, ...el.data()}))))
+    .catch(err => console.log(err))
+    .finally(() => setLoader(false))
+  } 
+}, [id]);
 
   return (
     <div>
-        {loading ?
-        <h2 className='loading'>Cargando...</h2>
+        {loader ?
+        <Loader/>
         :
-        <ItemList products={products} id={id} />
+        <ItemList items={items}/>
         }
     </div>
   );

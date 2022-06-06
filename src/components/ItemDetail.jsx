@@ -13,6 +13,7 @@ const ItemDetail = ({ product }) => {
 
     function onAdd(quantity) {
         addToCart({...product, quantity})
+        
     }
     function handleInputType(){
         setInputType('buyButtons');
@@ -34,7 +35,7 @@ const ItemDetail = ({ product }) => {
                         </div>
                         <br/>
                         {inputType === 'itemCount' ?
-                            <ItemCount product={product} initial={1} stock={5} onAdd={onAdd} handleInputType={handleInputType}/>:
+                            <ItemCount product={product} initial={1} stock={product.stock} onAdd={onAdd} handleInputType={handleInputType}/>:
                             <BuyButtons/>}
                     </div>
                 </div>
