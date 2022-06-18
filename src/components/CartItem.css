@@ -1,9 +1,11 @@
-li{
+li {
     list-style: none;
-    font-size: larger;
+    font-size: 1.5rem;
     line-height: 2rem;
 }
+
 .cartRemove {
     cursor: pointer;
     font-weight: bolder;
+    text-decoration: underline;
 }

@@ -3,9 +3,14 @@
     color: #AABEAB;
     justify-content: center;
 }
+
 .loading {
     color: #AABEAB;
     display: flex;
     justify-content: center;
+    padding-top: 2rem;
+}
+
+.listPosition {
     padding-top: 2rem;
 }

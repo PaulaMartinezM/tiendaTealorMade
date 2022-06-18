@@ -1,13 +1,14 @@
 import Item from "./Item";
+
 import './ItemList.css';
 
 
-function ItemList({items}) {
+function ItemList({ items }) {
   return (
     <div className='cardPosition'>
-        {items.map((el) => <Item key={el.id} el={el}/>)}
+      {items.map((el) => <Item key={el.id} el={el} />)}
     </div>
-  )
+  );
 }
 
 export default ItemList

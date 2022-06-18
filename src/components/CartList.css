@@ -1,0 +1,33 @@
+.inputFormat {
+    size: 100;
+}
+
+input {
+    size: 100;
+    font-size: large;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    min-width: 100%;
+}
+
+textarea {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
+    min-width: 100%;
+}
+
+button {
+    background-color: #C49A64;
+    color: white;
+    outline-color: #C49A64;
+    outline-width: 0rem;
+    width: 10rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+}
+
+body {
+    padding-bottom: 2rem;
+}

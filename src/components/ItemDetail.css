@@ -1,29 +1,37 @@
-button{
+button {
     background-color: #C49A64;
     color: white;
     outline-color: #C49A64;
     outline-width: 0rem;
-  }
-  .itemDetailComplete{
-      display: flex;
-      justify-content: center;
-      color: #AABEAB;
-  }
- .itemDetailImg{
-     width: 100%;
-     border-radius: 5%;    
- }
- .itemDetail{
-     display: grid;
-     grid-template-columns: 300px 200px;
-     margin-left: 2rem;
-     justify-content: space-evenly;
-     align-items: center;
-     border-color: #AABEAB;
-     border-style: dotted;
-     border-radius: 5%;
- }
- .itemInformation{
-     text-align: center;
- }
- 
+}
+
+.itemDetailComplete {
+    display: flex;
+    justify-content: center;
+    color: #AABEAB;
+}
+
+.itemDetailImg {
+    width: 100%;
+    border-radius: 5%;
+    padding-right: 1rem;
+}
+
+.itemDetail {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    justify-content: center;
+    align-items: center;
+    border-color: #AABEAB;
+    border-style: dotted;
+    border-radius: 5%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0%;
+}
+
+.itemInformation {
+    text-align: center;
+    font-size: 1rem;
+}

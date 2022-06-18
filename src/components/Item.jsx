@@ -1,8 +1,7 @@
-import React from 'react'
 import { Link } from 'react-router-dom';
 import { Card } from 'react-bootstrap';
-import './Item.css';
 
+import './Item.css';
 
 function Item({ el }) {
     return (
@@ -16,8 +15,8 @@ function Item({ el }) {
                         <p>{`Variedad: ${el.variety}`}</p>
                         <p>{`Precio: ${el.price}`}</p>
                     </Card.Text>
-                    <Link to={`/itemDetail/${el.id}`}>
-                        <button>Detalle del producto</button>
+                    <Link to={`/itemDetail/${el.id}`} style={{ pointerEvents: el.stock <= 0 && 'none' }}>
+                        <button>{el.stock <= 0 ? 'Sin stock' : 'Detalle del producto'}</button>
                     </Link>
                 </Card.Body>
             </Card>

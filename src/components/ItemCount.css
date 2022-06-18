@@ -1,13 +1,12 @@
 .itemCount {
-    display: flex;
-    display: inline;
-    color: #AABEAB;
-    padding-left: 2rem;
-    padding-right: 2rem;
-    
+  display: flex;
+  display: inline;
+  color: #AABEAB;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
-button{
+button {
   background-color: #C49A64;
   color: white;
   outline-color: #C49A64;

@@ -12,16 +12,27 @@
     display: grid;
     justify-items: center;
 }
+
 .cardName {
     font-weight: bold;
-    font-size: larger;
+    font-size: 2rem;
 }
-.cardSpace{
+
+.cardInfo {
+    font-size: 1rem;
+    line-height: 0;
+
+}
+
+.cardSpace {
     padding-bottom: 2rem;
 }
-button{
+
+button {
     background-color: #C49A64;
     color: white;
     outline-color: #C49A64;
     outline-width: 0rem;
-  }
+    border-radius: 10%;
+    border-color: #C49A64;
+}
