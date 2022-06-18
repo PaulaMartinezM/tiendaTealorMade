@@ -1,3 +1,39 @@
+# Tealor Made Blends
+## Author: Paula Martinez
+
+[![React](https://res.cloudinary.com/practicaldev/image/fetch/s--3zWuwYa3--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pdib9r9rk5j1m7oala1p.png)](https://res.cloudinary.com/practicaldev/image/fetch/s--3zWuwYa3--/c_imagga_scale,f_auto,fl_progressive,h_900,q_auto,w_1600/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/pdib9r9rk5j1m7oala1p.png)
+
+[gitHub](https://github.com/PaulaMartinezM/tiendaTealorMade)
+
+## Libraries
+
+Used libraries in the ecommerce.
+
+| Library | Used for | Version |
+| ------ | ------ | ------ |
+| Bootstrap | Cards Styles | 5.1.3
+| Firebase | Using Firestore as a catalog and purchase order database | 9.8.1
+
+## Description
+
+Development of an e-commerce for the digital sale of tea strands and herbal mix for yerba mate.
+  
+     
+> Both products are marketed under the
+> Tealor Made Blends brand, loose tea and
+> mix for yerba mate.
+> The Tealor Made brand is a play on words
+> between Tailor Made and Tea.
+> This brand is a recent Argentine family
+> microenterprise oriented to wholesale trade
+> that is growing and trying to lay its
+> foundations in retail as well.
+
+## Deploy
+
+Demo: [Tealor Made Blends](https://curious-brioche-f4500a.netlify.app)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
